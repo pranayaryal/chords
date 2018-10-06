@@ -10,7 +10,7 @@ const Hero = props => {
                         Ukelele Chords
                     </h1>
                     <h2 className="subtitle">
-                        Using D3 and React By Pranay
+                        Using D3 and React by Pranay
                     </h2>
                 </div>
             </div>
