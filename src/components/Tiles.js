@@ -11,10 +11,10 @@ import Line from './Line'
 const Tiles = (props)=> {
 
     const verticals = lodash.range(7, 77, 20)
-    const horizontals = lodash.range(10, 110, 33)
+    const horizontals = lodash.range(10, 143, 33)
 
     let verticalLines = verticals.map((vertical, i) => 
-                 <Line x1={vertical} y1="10" x2={vertical} y2="110" key={i}
+                 <Line x1={vertical} y1="10" x2={vertical} y2="142" key={i}
                     stroke="gray" strokeWidth="2"/> 
     )
 

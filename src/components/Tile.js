@@ -9,10 +9,10 @@ const Tile = props => {
                     <svg width="200" height="200">
                         {props.verticalLines}
                         {props.horizontalLines}
-                        <circle cx={props.x1} cy={props.y1} r="6" fill="blue" />
-                        <circle cx={props.x2} cy={props.y2} r="6" fill="purple"/>
-                        <circle cx={props.x3} cy={props.y3} r="6" fill="green"/>
-                        { props.x4 > 0 ? <circle cx={props.x4} cy={props.y4} r="6" fill="orange"/> : '' }
+                        <circle cx={props.x1} cy={props.y1} r="6" fill="grey" />
+                        <circle cx={props.x2} cy={props.y2} r="6" fill="grey"/>
+                        <circle cx={props.x3} cy={props.y3} r="6" fill="grey"/>
+                        { props.x4 > 0 ? <circle cx={props.x4} cy={props.y4} r="6" fill="grey"/> : '' }
 
                     </svg>
                 </div>
