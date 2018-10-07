@@ -26,6 +26,7 @@
   ],
   "devDependencies": {
     "bulma": "^0.7.1",
-    "d3": "^5.7.0"
+    "d3": "^5.7.0",
+    "react-router-dom": "^4.3.1"
   }
 }
