@@ -4,61 +4,75 @@ import FourFinger from './FourFinger';
 import Gb from './chords/Gb'
 import Gbm from './chords/Gbm'
 import Gbaug from  './chords/Gbaug'
+import Tile from './Tile'
+import * as lodash from 'lodash'
+import Line from './Line'
 
-const Tiles = props => {
-    return(
+const Tiles = (props)=> {
+
+    const verticals = lodash.range(7, 77, 20)
+    const horizontals = lodash.range(10, 110, 33)
+
+    let verticalLines = verticals.map((vertical, i) => 
+                 <Line x1={vertical} y1="10" x2={vertical} y2="110" key={i}
+                    stroke="gray" strokeWidth="2"/> 
+    )
+
+    let horizontalLines = horizontals.map((horizontal, i) => 
+                 <Line x1="7" y1={horizontal} x2="67" y2={horizontal} key={i}
+                    stroke="gray" strokeWidth="2"/> 
+        ); 
+
+    return (
+
+    // <div className='container'>
+    // { chords.map(chord => 
+    //   <Tile chordName={chord.name}/>
+      
+    //  )}
+
+
+    // </div>
+//     return(
+//       <div className='container'>
+//          <div className="tile is-ancestor">
+//             <div className='tile is-vertical is-12'>
+//                 <div className='tile'>
+//                     <Gb/>
+//                     <Gbm />
+//                     <Gbaug />
+//             </div>
+//             </div>
+//          </div>
+//          </div>
+ 
+//    );
+
       <div className='container'>
          <div className="tile is-ancestor">
             <div className='tile is-vertical is-12'>
                 <div className='tile'>
-                    <Gb/>
-                    <Gbm />
-                    <Gbaug />
-                    <div className='tile is-parent'>
-                        <article className='tile is-child is-notification'>
-                            <p className='subtitle'>Gbdim</p>
-                            <Chord
-                                fingerOneX="20"
-                                fingerOneY="20"
-                                fingerTwoX="55"
-                                fingerTwoY="50"
-                                fingerThreeX="80"
-                                fingerThreeY="20"
-                                />
-                        </article> 
-                    </div>
-                    <div className='tile is-parent'>
-                        <article className='tile is-child is-notification'>
-                            <p className='subtitle'>Gb7</p>
-                            <Chord
-                                fingerOneX="20"
-                                fingerOneY="20"
-                                fingerTwoX="55"
-                                fingerTwoY="50"
-                                fingerThreeX="80"
-                                fingerThreeY="20"
-                                />
-                        </article> 
-                    </div>
-                    <div className='tile is-parent'>
-                        <article className='tile is-child is-notification'>
-                            <p className='subtitle'>Gbm7</p>
-                            <Chord
-                                fingerOneX="20"
-                                fingerOneY="20"
-                                fingerTwoX="55"
-                                fingerTwoY="50"
-                                fingerThreeX="80"
-                                fingerThreeY="20"
-                                />
-                        </article> 
-                    </div>
+                    { props.chords.map(chord => 
+                       <Tile chordName={chord.name}  
+                          x1={chord.x1} y1={chord.y1} 
+                          x2={chord.x2} y2={chord.y2}
+                          x3={chord.x3} y3={chord.y3}
+                          x4={chord.x4} y4={chord.y4}
+                          verticalLines={verticalLines}
+                          horizontalLines={horizontalLines}
+
+                          />
+                    )
+                    }
                 </div>
             </div>
          </div>
-      </div>
+    </div>
  
-   );
-}
+
+
+
+
+);}
 
 export default Tiles;
