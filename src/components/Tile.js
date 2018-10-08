@@ -6,7 +6,7 @@ const Tile = props => {
             <article className='tile is-child is-notification'>
                 <p className='subtitle'>{props.chordName}</p>
                 <div className='content'>
-                    <svg width="200" height="200">
+                    <svg width="100" height="200">
                         <text x="76" y="68" fill="red">{props.textLower}</text>
                         <text x="76" y="38" fill="red">{props.textUpper}</text>
                         {props.verticalLines}

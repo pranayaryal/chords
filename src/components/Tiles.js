@@ -48,7 +48,6 @@ const Tiles = (props)=> {
  
 //    );
 
-      <div className='container'>
          <div className="tile is-ancestor">
             <div className='tile is-vertical is-12'>
                 <div className='tile'>
@@ -69,7 +68,6 @@ const Tiles = (props)=> {
                 </div>
             </div>
          </div>
-    </div>
  
 
 
