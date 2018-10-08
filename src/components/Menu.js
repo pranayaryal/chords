@@ -7,7 +7,7 @@ class Menu extends Component {
       <div>
         <aside className="menu">
         <p className="menu-label">
-            Chords
+            Chord Families
         </p>
         <ul class="menu-list">
             <li>

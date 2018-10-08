@@ -58,6 +58,8 @@ const Tiles = (props)=> {
                           x2={chord.x2} y2={chord.y2}
                           x3={chord.x3} y3={chord.y3}
                           x4={chord.x4} y4={chord.y4}
+                          textLower={chord.textLower}
+                          textUpper={chord.textUpper}
                           verticalLines={verticalLines}
                           horizontalLines={horizontalLines}
 

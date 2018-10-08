@@ -9,6 +9,15 @@ import Gb from './components/chords/Gb'
 import G from './components/chords/G'
 import Ab from './components/chords/Ab'
 import A from './components/chords/A'
+import Bb from './components/chords/Bb'
+import B from './components/chords/B'
+import C from './components/chords/C'
+import Db from './components/chords/Db'
+import D from './components/chords/D'
+import Eb from './components/chords/Eb'
+import E from './components/chords/E'
+import F from './components/chords/F'
+
 // import './App.css';
 
 class App extends Component {
@@ -50,7 +59,7 @@ class App extends Component {
     <Router>
       <div>
         <br />
-        <Nav/>
+        <Route path="/:id" component={Nav} />
         <br />
         <div className='container'>
           <div className='columns'>
@@ -59,10 +68,19 @@ class App extends Component {
               <Menu1 chords={this.state.chords}/>
             </div>
             <div className='column'>
+              <Route exact={true} path='/' component={Gb}/>
               <Route exact={true} path='/Gb' component={Gb}/>
               <Route exact={true} path='/G' component={G}/>
               <Route exact={true} path='/Ab' component={Ab}/>
               <Route exact={true} path='/A' component={A}/>
+              <Route exact={true} path='/Bb' component={Bb}/>
+              <Route exact={true} path='/B' component={B}/>
+              <Route exact={true} path='/C' component={C}/>
+              <Route exact={true} path='/Db' component={Db}/>
+              <Route exact={true} path='/D' component={D}/>
+              <Route exact={true} path='/Eb' component={Eb}/>
+              <Route exact={true} path='/E' component={E}/>
+              <Route exact={true} path='/F' component={F}/>
             </div>
           </div>
         </div>
