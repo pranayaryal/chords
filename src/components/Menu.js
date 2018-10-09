@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Menu extends Component {
-  render() {
-    return (
+const Menu1 = props => {
+    return(
       <div>
         <aside className="menu">
         <p className="menu-label">
@@ -11,24 +10,47 @@ class Menu extends Component {
         </p>
         <ul class="menu-list">
             <li>
-                <Link to="/mmr">Gb</Link>
+                <Link to="/Gb">Gb</Link>
             </li>
             <li>
-                <Link to="/vim">G</Link>
+                <Link to="/G">G</Link>
             </li>
             <li>
-                <Link to="/vim">Ab</Link>
+                <Link to="/Ab">Ab</Link>
             </li>
             <li>
-                <Link to="/vim">Eb</Link>
+                <Link to="/A">A</Link>
+            </li>
+            <li>
+                <Link to="/Bb">Bb</Link>
+            </li>
+            <li>
+                <Link to="/B">B</Link>
+            </li>
+            <li>
+                <Link to="/C">C</Link>
+            </li>
+            <li>
+                <Link to="/Db">Db</Link>
+            </li>
+            <li>
+                <Link to="/D">D</Link>
+            </li>
+            <li>
+                <Link to="/Eb">Eb</Link>
+            </li>
+            <li>
+                <Link to="/E">E</Link>
+            </li>
+            <li>
+                <Link to="/F">F</Link>
             </li>
         </ul>
-        
         </aside>
-        
+         
       </div>
-    );
-  }
+ 
+   );
 }
 
-export default Menu;
+export default Menu1;

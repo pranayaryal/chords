@@ -4,7 +4,6 @@ import Tiles from './components/Tiles';
 import Nav from './components/Nav'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Menu from './components/Menu'
-import Menu1 from './components/Menu1'
 import Gb from './components/chords/Gb'
 import G from './components/chords/G'
 import Ab from './components/chords/Ab'
@@ -65,7 +64,7 @@ class App extends Component {
           <div className='columns'>
             <div className='column is-one-fifth'>
               {/* <Menu /> */}
-              <Menu1 chords={this.state.chords}/>
+              <Menu chords={this.state.chords}/>
             </div>
             <div className='column'>
               <Route exact={true} path='/' component={Gb}/>
