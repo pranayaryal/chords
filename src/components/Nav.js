@@ -6,7 +6,7 @@ const Nav = ({match}) => {
         <nav class="level">
             <div class="level-item has-text-centered">
                 <div>
-                <p class="title">Ukelele Chordss ({match.params.id})</p>
+                <p class="title">Ukelele Chords ({match.params.id})</p>
                 </div>
             </div>
         </nav>
