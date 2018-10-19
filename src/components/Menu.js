@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Menu1 = props => {
     return(
@@ -10,40 +10,40 @@ const Menu1 = props => {
         </p>
         <ul class="menu-list">
             <li>
-                <Link to="/Gb">Gb</Link>
+                <NavLink to="/Gb">Gb</NavLink>
             </li>
             <li>
-                <Link to="/G">G</Link>
+                <NavLink to="/G">G</NavLink>
             </li>
             <li>
-                <Link to="/Ab">Ab</Link>
+                <NavLink to="/Ab">Ab</NavLink>
             </li>
             <li>
-                <Link to="/A">A</Link>
+                <NavLink to="/A">A</NavLink>
             </li>
             <li>
-                <Link to="/Bb">Bb</Link>
+                <NavLink to="/Bb">Bb</NavLink>
             </li>
             <li>
-                <Link to="/B">B</Link>
+                <NavLink to="/B">B</NavLink>
             </li>
             <li>
-                <Link to="/C">C</Link>
+                <NavLink to="/C">C</NavLink>
             </li>
             <li>
-                <Link to="/Db">Db</Link>
+                <NavLink to="/Db">Db</NavLink>
             </li>
             <li>
-                <Link to="/D">D</Link>
+                <NavLink to="/D">D</NavLink>
             </li>
             <li>
-                <Link to="/Eb">Eb</Link>
+                <NavLink to="/Eb">Eb</NavLink>
             </li>
             <li>
-                <Link to="/E">E</Link>
+                <NavLink to="/E">E</NavLink>
             </li>
             <li>
-                <Link to="/F">F</Link>
+                <NavLink to="/F">F</NavLink>
             </li>
         </ul>
         </aside>

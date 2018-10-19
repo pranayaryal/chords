@@ -67,19 +67,19 @@ class App extends Component {
               <Menu chords={this.state.chords}/>
             </div>
             <div className='column'>
-              <Route exact={true} path='/' component={Gb}/>
-              <Route exact={true} path='/Gb' component={Gb}/>
-              <Route exact={true} path='/G' component={G}/>
-              <Route exact={true} path='/Ab' component={Ab}/>
-              <Route exact={true} path='/A' component={A}/>
-              <Route exact={true} path='/Bb' component={Bb}/>
-              <Route exact={true} path='/B' component={B}/>
-              <Route exact={true} path='/C' component={C}/>
-              <Route exact={true} path='/Db' component={Db}/>
-              <Route exact={true} path='/D' component={D}/>
-              <Route exact={true} path='/Eb' component={Eb}/>
-              <Route exact={true} path='/E' component={E}/>
-              <Route exact={true} path='/F' component={F}/>
+              <Route exact path='/' component={Gb}/>
+              <Route path='/Gb' component={Gb}/>
+              <Route path='/G' component={G}/>
+              <Route path='/Ab' component={Ab}/>
+              <Route path='/A' component={A}/>
+              <Route path='/Bb' component={Bb}/>
+              <Route path='/B' component={B}/>
+              <Route path='/C' component={C}/>
+              <Route path='/Db' component={Db}/>
+              <Route path='/D' component={D}/>
+              <Route path='/Eb' component={Eb}/>
+              <Route path='/E' component={E}/>
+              <Route path='/F' component={F}/>
             </div>
           </div>
         </div>
