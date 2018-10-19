@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Hero from './components/Hero';
 import Tiles from './components/Tiles';
 import Nav from './components/Nav'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import Menu from './components/Menu'
 import Gb from './components/chords/Gb'
 import G from './components/chords/G'
@@ -55,7 +55,7 @@ class App extends Component {
 
   render() {
     return (
-    <Router>
+    <BrowserRouter>
       <div>
         <br />
         <Route path="/:id" component={Nav} />
@@ -84,7 +84,7 @@ class App extends Component {
           </div>
         </div>
     </div>
-    </Router>
+    </BrowserRouter>
     );
   }
 }
