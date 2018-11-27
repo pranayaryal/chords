@@ -4,6 +4,7 @@ import FourFinger from './FourFinger';
 import Gb from './chords/Gb'
 import Gbm from './chords/Gbm'
 import Gbaug from  './chords/Gbaug'
+import ChordList from './ChordList'
 
 const Tiles = props => {
     return(
@@ -14,6 +15,7 @@ const Tiles = props => {
                     <Gb/>
                     <Gbm />
                     <Gbaug />
+                    <ChordList />
                     <div className='tile is-parent'>
                         <article className='tile is-child is-notification'>
                             <p className='subtitle'>Gbdim</p>
