@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Nav = ({match}) => {
+const ChordName = ({match}) => {
     return (
         <nav class="level">
             <div class="level-item has-text-centered">
@@ -13,4 +13,4 @@ const Nav = ({match}) => {
     )
 }
 
-export default Nav;
+export default ChordName;

@@ -1,43 +1,27 @@
 import React from 'react';
-import Circle from './Circle';
-import Line from './Line'
-import * as lodash from 'lodash'
-
 
 const Chord = props => {
+    return(
+        <div className='tile is-parent'>
+            <article className='tile is-child is-notification'>
+                <p className='subtitle'>{props.chordName}</p>
+                <div className='content'>
+                    <svg className="svg-class" width="200" height="200">
+                        <text x="76" y="68" fill="red">{props.textLower}</text>
+                        <text x="76" y="38" fill="red">{props.textUpper}</text>
+                        {props.verticalLines}
+                        {props.horizontalLines}
+                        { props.x1 > 0 ? <circle cx={props.x1} cy={props.y1} r="6" fill="grey"/> : '' }
+                        { props.x2 > 0 ? <circle cx={props.x2} cy={props.y2} r="6" fill="grey"/> : '' }
+                        { props.x3 > 0 ? <circle cx={props.x3} cy={props.y3} r="6" fill="grey"/> : '' }
+                        { props.x4 > 0 ? <circle cx={props.x4} cy={props.y4} r="6" fill="grey"/> : '' }
 
-    const verticals = lodash.range(7, 77, 20)
-    const horizontals = lodash.range(10, 110, 33)
-
-    const keys = [props.fingerOneX, props.fingerTwoX, props.fingerThreeX]
-    const values = [props.fingerOneY, props.fingerTwoY, props.fingerThreeY]
-
-    let together = {};
-
-    keys.map((key, i) => together[key] = values[i])
-
-    let verticalLines = verticals.map((vertical, i) => 
-                 <Line x1={vertical} y1="10" x2={vertical} y2="110" key={i}
-                    stroke="gray" strokeWidth="2"/> 
-    )
-
-    let horizontalLines = horizontals.map((horizontal, i) => 
-                 <Line x1="7" y1={horizontal} x2="67" y2={horizontal} key={i}
-                    stroke="gray" strokeWidth="2"/> 
-        ); 
-
-    let circles = Object.keys(together).map((key) => 
-        <Circle radius="6" key={key} x={parseInt(key)} y={parseInt(together[key])}/> 
-    );
-
-    return (
-            <svg width="200" height="200">
-                {verticalLines}
-                {horizontalLines}
-                {circles}
-            </svg>
-    );
-
+                    </svg>
+                </div>
+            </article> 
+        </div>
+ 
+   );
 }
 
 export default Chord;

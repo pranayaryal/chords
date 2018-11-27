@@ -1,14 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Menu1 = props => {
+const Menu = props => {
     return(
       <div>
         <aside className="menu">
         <p className="menu-label">
             Chord Families
         </p>
-        <ul class="menu-list">
+        <ul className="menu-list">
             <li>
                 <NavLink to="/Gb">Gb</NavLink>
             </li>
@@ -53,4 +53,4 @@ const Menu1 = props => {
    );
 }
 
-export default Menu1;
+export default Menu;

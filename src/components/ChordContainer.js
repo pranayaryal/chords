@@ -1,14 +1,9 @@
 import React from 'react';
 import Chord from './Chord'
-import FourFinger from './FourFinger';
-import Gb from './chords/Gb'
-import Gbm from './chords/Gbm'
-import Gbaug from  './chords/Gbaug'
-import Tile from './Tile'
 import * as lodash from 'lodash'
 import Line from './Line'
 
-const Tiles = (props)=> {
+const ChordContainer = (props)=> {
 
     const verticals = lodash.range(7, 77, 20)
     const horizontals = lodash.range(10, 143, 33)
@@ -25,34 +20,12 @@ const Tiles = (props)=> {
 
     return (
 
-    // <div className='container'>
-    // { chords.map(chord => 
-    //   <Tile chordName={chord.name}/>
-      
-    //  )}
-
-
-    // </div>
-//     return(
-//       <div className='container'>
-//          <div className="tile is-ancestor">
-//             <div className='tile is-vertical is-12'>
-//                 <div className='tile'>
-//                     <Gb/>
-//                     <Gbm />
-//                     <Gbaug />
-//             </div>
-//             </div>
-//          </div>
-//          </div>
- 
-//    );
-
          <div className="tile is-ancestor">
             <div className='tile is-vertical is-12'>
                 <div className='tile'>
-                    { props.chords.map(chord => 
-                       <Tile chordName={chord.name}  
+                    { props.chords.map((chord,id) => 
+                       <Chord chordName={chord.name}  
+                         key={id}
                           x1={chord.x1} y1={chord.y1} 
                           x2={chord.x2} y2={chord.y2}
                           x3={chord.x3} y3={chord.y3}
@@ -75,4 +48,4 @@ const Tiles = (props)=> {
 
 );}
 
-export default Tiles;
+export default ChordContainer;

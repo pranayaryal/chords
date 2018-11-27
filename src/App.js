@@ -1,50 +1,22 @@
 import React, { Component } from 'react';
-import Hero from './components/Hero';
-import Tiles from './components/Tiles';
-import Nav from './components/Nav'
+import ChordName from './components/ChordName'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Menu from './components/Menu'
-import Gb from './components/chords/Gb'
-import G from './components/chords/G'
-import Ab from './components/chords/Ab'
-import A from './components/chords/A'
-import Bb from './components/chords/Bb'
-import B from './components/chords/B'
-import C from './components/chords/C'
-import Db from './components/chords/Db'
-import D from './components/chords/D'
-import Eb from './components/chords/Eb'
-import E from './components/chords/E'
-import F from './components/chords/F'
+import MainChord from './components/MainChord'
+
+import data from './data'
 
 // import './App.css';
 
 class App extends Component {
   constructor(props){
     super(props)
+    const { Gb } = data
     this.clickTile = this.clickTile.bind(this)
-    const fret1 = 25; const string1= 7 
-    const fret2 = 57; const string2 = 27
-    const fret3 = 89; const string3 = 46 
-    const fret4 = 119; const string4 = 66
     
     this.state  = {
       chords: [
-        { name: 'Gb', x1:string2, y1:fret1, x2:string3, y2:fret2, x3:string4, y3:fret1, x4:string1, y4: fret3  },
-        { name: 'Gbm', x1: string1, y1: fret2, x2: string2, y2:fret1, x3:string3, y3:fret2 },
-        { name: 'Gbaug', x1: string1, y1: fret3, x2: string2, y2:fret2, x3:string3, y3:fret2, x4:string4,y4:fret1 },
-        { name: 'Gbdim', x1: string1, y1: fret2, x2: string2, y2:fret3, x3:string3, y3:fret2, x4:string4,y4:fret3 },
-        { name: 'Gb7', x1: string1, y1: fret3, x2: string2, y2: fret4, x3:string3, y3:fret2, x4:string4,y4:fret4 },
-        { name: 'Gbm7', x1: string1, y1: fret2, x2: string2, y2:fret4, x3:string3, y3:fret2, x4:string4,y4:fret4 },
-        { name: 'Gbmaj7', x1: string1, y1: fret2, x2: string2, y2:fret4, x3:string3, y3:fret1, x4:string4, y4:fret3 },
-        { name: 'Gb6', x1: string1, y1: fret3, x2: string2, y2:fret3, x3:string3, y3:fret2, x4:string4, y4:fret4 },
-        { name: 'Gbm6', x1: string1, y1: fret2, x2: string2, y2:fret1, x3:string3, y3:fret2, x4:string4, y4:fret3 },
-        { name: 'Gbadd9', x1: string1, y1: fret1, x2: string2, y2:fret1, x3:string3, y3:fret2, x4:string4, y4:fret1 },
-        { name: 'Gbm9', x1: string1, y1: fret1, x2: string2, y2:fret2, x3:string3, y3:fret2 },
-        { name: 'Gb9', x1: string1, y1: fret1, x2: string2, y2:fret1, x3:string4, y3:fret1 },
-        { name: 'Gbsus2', x1: string1, y1: fret1, x2: string2, y2:fret1, x3:string3, y3:fret2, x4:string4, y4:fret4 },
-        { name: 'Gbsus4', x1: string1, y1: fret4, x2: string2, y2:fret1, x3:string3, y3:fret2, x4:string4, y4:fret2 },
-        { name: 'Gb7sus4', x1: string1, y1: fret2, x2: string2, y2:fret2, x3:string3, y3:fret3, x4:string4, y4:fret3 },
+        Gb
       ]
     }
   }
@@ -58,28 +30,27 @@ class App extends Component {
     <BrowserRouter>
       <div>
         <br />
-        <Route path="/:id" component={Nav} />
+        <Route path="/:id" component={ChordName} />
         <br />
         <div className='container'>
           <div className='columns'>
             <div className='column is-one-fifth'>
-              {/* <Menu /> */}
-              <Menu chords={this.state.chords}/>
+              <Menu />
             </div>
             <div className='column'>
-              <Route exact path='/' component={Gb}/>
-              <Route path='/Gb' component={Gb}/>
-              <Route path='/G' component={G}/>
-              <Route path='/Ab' component={Ab}/>
-              <Route path='/A' component={A}/>
-              <Route path='/Bb' component={Bb}/>
-              <Route path='/B' component={B}/>
-              <Route path='/C' component={C}/>
-              <Route path='/Db' component={Db}/>
-              <Route path='/D' component={D}/>
-              <Route path='/Eb' component={Eb}/>
-              <Route path='/E' component={E}/>
-              <Route path='/F' component={F}/>
+              <Route exact path='/' component = {() => <MainChord chord="Gb"/>}/>
+              <Route path='/Gb' component = {() => <MainChord chord="Gb"/>}/>
+              <Route path='/G' component = {() => <MainChord chord="G"/>}/>
+              <Route path='/Ab' component = {() => <MainChord chord="Ab"/>}/>
+              <Route path='/A' component = {() => <MainChord chord="A"/>}/>
+              <Route path='/Bb' component = {() => <MainChord chord="Bb"/>}/>
+              <Route path='/B' component = {() => <MainChord chord="B"/>}/>
+              <Route path='/C' component = {() => <MainChord chord="C"/>}/>
+              <Route path='/Db' component = {() => <MainChord chord="Db"/>}/>
+              <Route path='/D' component = {() => <MainChord chord="D"/>}/>
+              <Route path='/Eb' component = {() => <MainChord chord="Eb"/>}/>
+              <Route path='/F' component = {() => <MainChord chord="F"/>}/>
+              <Route path='/E' component = {() => <MainChord chord="E"/>}/>
             </div>
           </div>
         </div>
