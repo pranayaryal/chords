@@ -1,31 +1,18 @@
-import React, { Component } from 'react';
+
+import React, { useState } from 'react';
 import ChordName from './components/ChordName'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Menu from './components/Menu'
-import MainChord from './components/MainChord'
+import ChordContainer from './components/ChordContainer'
 
 import data from './data'
 
 // import './App.css';
 
-class App extends Component {
-  constructor(props){
-    super(props)
-    const { Gb } = data
-    this.clickTile = this.clickTile.bind(this)
-    
-    this.state  = {
-      chords: [
-        Gb
-      ]
-    }
-  }
+const App = () => {
+   
+    const [ chords, setChords ] = useState(Object.keys(data))
 
-  clickTile = val => {
-    console.log('you clicked it');
-  }
-
-  render() {
     return (
     <BrowserRouter>
       <div>
@@ -38,19 +25,10 @@ class App extends Component {
               <Menu />
             </div>
             <div className='column'>
-              <Route exact path='/' component = {() => <MainChord chord="Gb"/>}/>
-              <Route path='/Gb' component = {() => <MainChord chord="Gb"/>}/>
-              <Route path='/G' component = {() => <MainChord chord="G"/>}/>
-              <Route path='/Ab' component = {() => <MainChord chord="Ab"/>}/>
-              <Route path='/A' component = {() => <MainChord chord="A"/>}/>
-              <Route path='/Bb' component = {() => <MainChord chord="Bb"/>}/>
-              <Route path='/B' component = {() => <MainChord chord="B"/>}/>
-              <Route path='/C' component = {() => <MainChord chord="C"/>}/>
-              <Route path='/Db' component = {() => <MainChord chord="Db"/>}/>
-              <Route path='/D' component = {() => <MainChord chord="D"/>}/>
-              <Route path='/Eb' component = {() => <MainChord chord="Eb"/>}/>
-              <Route path='/F' component = {() => <MainChord chord="F"/>}/>
-              <Route path='/E' component = {() => <MainChord chord="E"/>}/>
+              <Route exact path='/' component = {() => <ChordContainer chord="Gb"/>}/>
+              { chords.map((chord, id) => 
+                  <Route path={`/${chord}`} key={id} component = {() => <ChordContainer chord={chord} />} />
+              )}
             </div>
           </div>
         </div>
@@ -58,6 +36,6 @@ class App extends Component {
     </BrowserRouter>
     );
   }
-}
 
 export default App;
+
