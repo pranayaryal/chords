@@ -21,7 +21,7 @@ const App = () => {
         <br />
         <div className='container'>
           <div className='columns'>
-            <div className='column is-one-fifth'>
+            <div className='column'>
               <Menu />
             </div>
             <div className='column'>
