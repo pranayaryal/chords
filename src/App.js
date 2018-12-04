@@ -4,12 +4,16 @@ import ChordName from './components/ChordName'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Menu from './components/Menu'
 import ChordContainer from './components/ChordContainer'
+import ReactGA from 'react-ga'
 
 import data from './data'
 
 // import './App.css';
 
 const App = () => {
+
+   ReactGA.initialize('UA-58522655-2')
+   ReactGA.pageview(window.location.pathname + window.location.search)
    
     const [ chords, setChords ] = useState(Object.keys(data))
 
