@@ -9,6 +9,13 @@
 # production
 #/build
 
+build/asset-manifest.json
+build/index.html
+build/manifest.json
+build/precache-manifest.fa845421825bae4f19b3502865df72f1.js
+build/service-worker.js
+build/static/
+
 # misc
 .DS_Store
 .env.local
