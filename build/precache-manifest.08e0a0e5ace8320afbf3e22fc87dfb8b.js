@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/static/css/main.37821c4d.chunk.css"
   },
   {
-    "revision": "2bd47596f42743cfaa951597e3b89744",
+    "revision": "f00b32033bc58a3a1c1ae50797ba6372",
     "url": "/index.html"
   }
 ];
