@@ -82,6 +82,7 @@ const data = {
             { name: 'Bbm', x1: string1, y1: fret3, x2: string2, y2:fret1, x3:string3, y3:fret1, x4:string4, y4: fret1},
             { name: 'Bbaug', x1: string1, y1: fret3, x2: string2, y2:fret2, x3:string3, y3:fret2, x4:string4, y4: fret1},
             { name: 'Bbdim', x1: string1, y1: fret3, x2: string2, y2:fret1, x3:string4, y3:fret1},
+            { name: 'Bbdim7', x2: string2, y2:fret1, x3:string4, y3:fret1},
             { name: 'Bb7', x1: string1, y1: fret1, x2: string2, y2: fret2, x3:string3, y3:fret1, x4:string4,y4:fret1 },
             { name: 'Bbm7', x1: string1, y1: fret1, x2: string2, y2:fret1, x3:string3, y3:fret1, x4:string4,y4:fret1 },
             { name: 'Bbmaj7', x1: string1, y1: fret3, x2: string2, y2:fret2, x3:string3, y3:fret1},
