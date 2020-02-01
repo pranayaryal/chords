@@ -1,6 +1,3 @@
-body {
-  background: #071a52;
-}
 
 .svg-class{
     padding: 0 30px;
@@ -13,6 +10,10 @@ body {
 
 
 @import '../node_modules/bulma/bulma.sass';
+
+html {
+  background: #071a52;
+}
 
 // Overrides
 .menu-label {
