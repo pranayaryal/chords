@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 const ChordName = ({match}) => {
+
+  useEffect(() => {
+    document.title = `Ukulele Chords (${match.params.id})`;
+  });
+
     return (
         <nav class="level">
             <div class="level-item has-text-centered">

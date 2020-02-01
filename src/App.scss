@@ -1,3 +1,6 @@
+body {
+  background: #071a52;
+}
 
 .svg-class{
     padding: 0 30px;
@@ -8,4 +11,29 @@
 }
 
 
+
 @import '../node_modules/bulma/bulma.sass';
+
+// Overrides
+.menu-label {
+      color: #fc85ae;
+}
+
+.menu-list {
+  a {
+      color: #17b978;
+      font-weight: 400;
+  }
+}
+
+.title, .subtitle {
+    // color: #fc85ae;
+    color: #17b978;
+}
+
+svg {
+  line {
+      color: #a7ff83;
+  }
+}
+
