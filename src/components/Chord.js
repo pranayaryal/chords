@@ -18,10 +18,10 @@ const Chord = props => {
   );
   return (
     <div className="lg:ml-24 sm:ml-20 ml-2">
-      <p className="ml-1 text-gray-800 text-xl">{props.chordName}</p>
+      <p className="ml-1 text-menu-color xl:text-xl">{props.chordName}</p>
       <div className="">
         <svg className="" width="80" height="200">
-          <text x="76" y="68" fill="red">{props.textLower}</text>
+          <text x="53" y="68" fill="#a7ff83" className="text-menu-color">{props.textLower}</text>
           <text x="76" y="38" fill="red">{props.textUpper}</text>
           {verticalLines}
           {horizontalLines}
