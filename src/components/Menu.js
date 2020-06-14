@@ -7,7 +7,7 @@ const Menu = props => {
   return (
     <div className="flex flex-col text-menu-color text-center xl:text-xl">
       {chords.map(chord =>
-        <NavLink className="hover:bg-gray-800 mt-2" to={`/${chord}`} key={chord}>{chord}</NavLink>
+        <NavLink className="hover:bg-gray-800 mt-2 hover:text-white" to={`/${chord}`} key={chord}>{chord}</NavLink>
       )}
     </div>
 
