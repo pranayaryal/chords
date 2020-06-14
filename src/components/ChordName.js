@@ -9,7 +9,7 @@ const ChordName = ({ match }) => {
 
   return (
     <div>
-      <p className="text-2xl text-center text-gray-800 mt-4">Chord Family - <span className="text-gray-500 text-md">{match.params.id}</span></p>
+      <p className="text-2xl text-center text-menu-color mt-4">Chord Family - <span className="text-green-300 text-md">{match.params.id}</span></p>
     </div>
   )
 }

@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="">
+      <div className="bg-back-black">
         <Navbar />
         <Route path="/:id" component={ChordName} />
         <div className="px-8 mt-2 lg:px-40">

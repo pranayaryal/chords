@@ -17,7 +17,7 @@ const Chord = props => {
       stroke="#fc85ae" strokeWidth="2" />
   );
   return (
-    <div className="lg:ml-24 md:ml-18 ml-2">
+    <div className="lg:ml-24 sm:ml-20 ml-2">
       <p className="ml-1 text-gray-800 text-xl">{props.chordName}</p>
       <div className="">
         <svg className="" width="80" height="200">

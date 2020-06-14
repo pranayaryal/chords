@@ -26,20 +26,8 @@ const Navbar = props => {
 
       {/* <div className={isOpen ? 'block text-white px-2 pt-2 pb-4 sm:block': 'hidden sm:block sm:text-white sm:px-2 sm:pt-2 sm:pb-4'}> */}
       <div onClick={() => setIsOpen(false)} className={`text-white text-center px-2 pt-2 pb-4 lg:hidden  ${isOpen ? 'block' : 'hidden'}`}>
-        {/* <NavLink to="/Gb" className="block px-2 py-1 rounded hover:bg-gray-800">Gb</NavLink>
-        <NavLink to="/G" className="block px-2 py-1 rounded hover:bg-gray-800">G</NavLink>
-        <NavLink to="/Ab" className="block px-2 py-1 rounded hover:bg-gray-800">Ab</NavLink>
-        <NavLink to="/A" className="block px-2 py-1 rounded hover:bg-gray-800">A</NavLink>
-        <NavLink to="/Bb" className="block px-2 py-1 rounded hover:bg-gray-800">Bb</NavLink>
-        <NavLink to="/B" className="block px-2 py-1 rounded hover:bg-gray-800">B</NavLink>
-        <NavLink to="/C" className="block px-2 py-1 rounded hover:bg-gray-800">C</NavLink>
-        <NavLink to="/Db" className="block px-2 py-1 rounded hover:bg-gray-800">Db</NavLink>
-        <NavLink to="/D" className="block px-2 py-1 rounded hover:bg-gray-800">D</NavLink>
-        <NavLink to="/Eb" className="block px-2 py-1 rounded hover:bg-gray-800">Eb</NavLink>
-        <NavLink to="/E" className="block px-2 py-1 rounded hover:bg-gray-800">E</NavLink>
-        <NavLink to="/F" className="block px-2 py-1 rounded hover:bg-gray-800">F</NavLink> */}
         {chords.map(chord => 
-          <NavLink className="mt-2 block px-2 py-1 rounded hover:bg-gray-800" to={`/${chord}`} key={chord}>{chord}</NavLink>
+          <NavLink className="mt-2 block px-2 py-1 rounded text-menu-color hover:bg-gray-800" to={`/${chord}`} key={chord}>{chord}</NavLink>
         )
         }
       </div>
