@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "concurrently": "^5.2.0",
     "lodash": "^4.17.11",
     "node-sass": "^4.9.3",
+    "postcss-cli": "^7.1.1",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
     "react-ga": "^2.5.6",
-    "react-scripts": "2.0.4"
+    "react-scripts": "2.0.4",
+    "tailwindcss": "^1.4.6"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "tailwind": "postcss src/tailwind.css -o src/App.css",
+    "start": "concurrently \"npm run tailwind\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
